@@ -1,4 +1,4 @@
-"""Write a Python program to count the number 4 in a given list."""
+"""Write a Python program to count the number 4 in a given list"""
 
 
 def count(lst):
