@@ -1,8 +1,5 @@
 #!/bin/bash
 
-# Force execution from the folder where this script lives
-cd "$(dirname "$0")"
-
 examine_session() {
     local session_dir="$1"
     cd "$session_dir" || exit 1
@@ -24,26 +21,20 @@ examine_session() {
 
 #----------------- Session 1 -----------------#
 examine_session "python/session1"
-
 #----------------- Session 2 -----------------#
-# Session 2
-cd python/session2 || exit 1
-python lab1_get_your_location.py
+python session2/lab1_get_your_location.py
 if [ $? -ne 0 ]; then
     echo "[🟥] Session 2 is not Solved yet"
     exit 1
 else
-    examine_session "."
+    examine_session "session2"
 fi
-cd ../..
 
-# Session 3
-cd python/session3 || exit 1
-python lab1_dictionary_problems.py
+#----------------- Session 3 -----------------#
+python session3/lab1_dictionary_problems.py
 if [ $? -ne 0 ]; then
     echo "[🟥] Session 3 is not solved yet"
+    # exit 1 # comment this line if you want to bypass session3
 else
-    examine_session "."
+    examine_session "session3"
 fi
-cd ../..
-
