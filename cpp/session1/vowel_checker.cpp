@@ -2,10 +2,8 @@
 #include <iostream>
 
 bool isVowel(char letter) {
-  // write your solution here...
-  // Hint: Check if the letter is 'a', 'e', 'i', 'o', 'u' (both uppercase and
-  // lowercase)
-  return false;
+  letter = std::tolower(letter);
+    return letter == 'a' || letter == 'e' || letter == 'i' || letter == 'o' || letter == 'u';
 }
 
 int main() {

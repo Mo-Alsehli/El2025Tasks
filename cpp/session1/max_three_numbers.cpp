@@ -1,9 +1,12 @@
 #include <cassert>
 #include <iostream>
 
+using namespace std;
+
 int getMaximum(int a, int b, int c) {
   // write your solution here...
-  return 0;
+  int maxi = max(max(a, b), c);
+  return maxi;
 }
 
 int main() {
