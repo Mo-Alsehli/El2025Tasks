@@ -1,11 +1,18 @@
 #include <cassert>
 #include <iostream>
+#include <climits>
 
 int findMaxInArray(int arr[], int size) {
   // write your solution here...
   // Hint: Iterate through the array and keep track of the maximum value
   // Hint: Handle edge cases like empty arrays
-  return 0;
+  int maxi = INT_MIN;
+  for(int i = 0; i < size; i++){
+    if(arr[i] > maxi){
+      maxi = arr[i];
+    }
+  }
+  return maxi;
 }
 
 int main() {

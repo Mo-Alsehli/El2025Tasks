@@ -8,6 +8,16 @@ void findEvenOdd(int arr[], int size, int even[], int odd[], int* evenCount, int
   // Hint: Update evenCount and oddCount accordingly
   *evenCount = 0;
   *oddCount = 0;
+
+  for(int i = 0; i < size; i++){
+    if(arr[i] % 2 == 0){
+      even[*evenCount] = arr[i];
+      *evenCount += 1;
+    }else {
+      odd[*oddCount] = arr[i];
+      *oddCount += 1;
+    }
+  }
 }
 
 int main() {
